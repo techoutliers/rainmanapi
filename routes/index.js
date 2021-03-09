@@ -1,6 +1,5 @@
 var express = require("express");
-const { getLocationWithIp, weather } = require("../utils");
-const { getWeather } = require("../utils/weather");
+const { getLocationWithIp, weather, constants } = require("../utils");
 var router = express.Router();
 
 /* GET home page. */
@@ -15,7 +14,17 @@ router.get("/weather", async (req, res, next) => {
       latitude: location.latitude,
       longitude: location.longitude,
     });
-    res.status(200).send(currentweather);
+    let number = 3;
+    if (
+      currentweather &&
+      currentweather.current &&
+      currentweather.current.weather &&
+      currentweather.current.weather.length > 0 &&
+      currentweather.current.weather[0].main
+    ) {
+      constants.weatherTypes[currentweather.current.weather[0].main];
+    }
+    res.status(200).send({ code: number });
   } catch (err) {
     res.status(400).send(err);
   }
