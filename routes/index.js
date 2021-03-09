@@ -6,7 +6,8 @@ router.get("/", function (req, res, next) {
   res.render("index", { title: "Express" });
 });
 router.get("/weather", function (req, res, next) {
-  var ip = req.socket.remoteAddress;
+  var ip = req.headers["x-forwarded-for"];
+  console.log(req.header);
   console.log(ip);
   res.status(200).send({ body: "Weather" });
 });
