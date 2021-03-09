@@ -14,7 +14,6 @@ router.get("/weather", async (req, res, next) => {
       latitude: location.latitude,
       longitude: location.longitude,
     });
-    let number = 3;
     if (
       currentweather &&
       currentweather.current &&
@@ -22,9 +21,14 @@ router.get("/weather", async (req, res, next) => {
       currentweather.current.weather.length > 0 &&
       currentweather.current.weather[0].main
     ) {
-      constants.weatherTypes[currentweather.current.weather[0].main];
+      res
+        .status(200)
+        .send({
+          code: constants.weatherTypes[currentweather.current.weather[0].main],
+        });
+    } else {
+      res.status(200).send({ code: 3 });
     }
-    res.status(200).send({ code: number });
   } catch (err) {
     res.status(400).send(err);
   }
