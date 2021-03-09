@@ -455,6 +455,11 @@ on-headers@~1.0.1:
   resolved "https://registry.yarnpkg.com/on-headers/-/on-headers-1.0.2.tgz#772b0ae6aaa525c399e489adfad90c403eb3c28f"
   integrity sha512-pZAE+FJLoyITytdqK0U5s+FIpjN0JP3OzFi/u8Rx+EV5/W+JTWGXG8xFzevE7AjBfDqHv/8vL8qQsIhHnqRkrA==
 
+openweather-apis@^4.4.1:
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/openweather-apis/-/openweather-apis-4.4.1.tgz#1f72c10a880287f38fbe3104be8e21dcf1c0b6c9"
+  integrity sha512-/t3IVSEwLFQN2xBdu4iAib9OifLzdAbea/OCokchZgvMOgwMEmr8g/pRz2HjuYQpHp6HWaiS2dMf5h48LJPGug==
+
 optimist@~0.3.5:
   version "0.3.7"
   resolved "https://registry.yarnpkg.com/optimist/-/optimist-0.3.7.tgz#c90941ad59e4273328923074d2cf2e7cbc6ec0d9"
