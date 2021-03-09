@@ -7,7 +7,8 @@ router.get("/", function (req, res, next) {
 });
 router.get("/weather", function (req, res, next) {
   var ip = req.headers["x-forwarded-for"];
-  console.log(req.header);
+  console.log(req.headers);
+  console.log(JSON.stringify(ip));
   console.log(ip);
   res.status(200).send({ body: "Weather" });
 });
