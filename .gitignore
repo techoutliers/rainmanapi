@@ -1,0 +1,16 @@
+node_modules
+tableView.txt
+docs
+.DS_Store
+jsdocs
+out
+combined.log
+info.log
+error.log
+*.env
+/dbBackup.js
+database-backup
+database-backup-archives
+/playground.js
+/src/config/dbBackupCron.js
+.env
